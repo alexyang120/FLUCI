@@ -1,6 +1,6 @@
 #top {
     height: 20%;
-    background-color: #d0d0d0;
+    background-image: linear-gradient(#a1a1a1,#d1d1d1);
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
 }
@@ -21,7 +21,7 @@ button {
     height: 45%;
     width: 40%;
     left: 3%;
-    top: 31%;
+    top: 30%;
     border: 1px solid black;
     padding: 10px 30px;
     cursor: pointer;
