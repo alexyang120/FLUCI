@@ -1,0 +1,236 @@
+body {
+    background-color: #d0d0d0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+#top {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.toptext {
+    font-size: 50px;
+}
+
+.return {
+    float: right;
+    position: relative;
+    bottom: 150px;
+}
+
+#bodycontent {
+    height: 100%;
+}
+
+.vitruvian {
+    width: 450px;
+    position: relative;
+    left: 13px;
+
+}
+
+.vitruvianimage {
+    width: 450px;
+    position: absolute;
+}
+
+.bodytext {
+    position: relative;
+    height: 100%;
+    left: 65px;
+    bottom: 50px;
+    width: 1100px;
+    white-space: initial;
+}
+
+.headertext {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.bodyp {
+    font-size: 25px;
+}
+
+.slider {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 210px;
+    top: 135px;
+}
+
+.slide1, .slide2, .slide3, .slide4{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide1 {
+    background: url(https://cdn.discordapp.com/attachments/673063010201370644/673435387506589716/bryn.png) no-repeat center;
+    background-size: cover;
+    animation: fade 10s infinite;
+    -webkit-animation: fade 10s infinite;
+}
+
+.slide2 {
+    background: url(https://cdn.discordapp.com/attachments/673063010201370644/673435391315017728/kl.png) no-repeat center;
+    background-size: cover;
+    animation: fade2 10s infinite;
+    -webkit-animation: fade2 10s infinite;
+}
+
+.slide3 {
+    background: url(https://cdn.discordapp.com/attachments/673063010201370644/673435393286471691/alx.png) no-repeat center;
+    background-size: cover;
+    animation: fade3 10s infinite;
+    -webkit-animation: fade3 10s infinite;
+}
+
+.slide4 {
+    background: url(https://cdn.discordapp.com/attachments/673063010201370644/673435394670592000/alvn.png) no-repeat center;
+    background-size: cover;
+    animation: fade4 10s infinite;
+    -webkit-animation: fade4 10s infinite;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    text-align: left;
+    right: 0;
+    background-color: #d0d0d0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    -webkit-box-shadow: -0px 0px 10px 6px gray;
+}
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+    .sidenav .closebtn {
+        top: 0;
+        right: 80%;
+        font-size: 36px;
+        position: absolute;
+    }
+
+.closednav {
+    float: right;
+    font-size: 36px;
+    position: relative;
+    right: 10px;
+    bottom: 150px;
+}
+
+.closebtn:hover {
+    color: white;
+}
+
+.sidelink {
+    
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1
+    }
+
+    25% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    75% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade2 {
+    0% {
+        opacity: 0
+    }
+
+    25% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    75% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes fade3 {
+    0% {
+        opacity: 0
+    }
+
+    25% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    75% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes fade4 {
+    0% {
+        opacity: 0
+    }
+
+    25% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    75% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}

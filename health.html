@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>FLUCI About</title>
+    <link rel="stylesheet" href="public/health.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="top">
+        <p class="toptext">Health Advisory: Keep Yourself and Others Safe</p>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">></a>
+            <a class="sidelink" href="index.html">Home</a>
+            <a class="sidelink" href="about.html">About</a>
+            <a class="sidelink" href="health.html">Health Advisory</a>
+        </div>
+        <div class="closednav">
+            <span style="cursor:pointer" onclick="openNav()"><</span>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </div>
+
+    <div id="bodycontent">
+        <div class="bodytext">
+            <p class="headertext">
+                <br />Masks:</p>
+            <p class="bodyp">
+                &nbsp&nbsp&nbsp&nbspThe research into which types of facial protection are the most reasonable for the average
+                person in a low-risk area is inconclusive. However, the two main types are surgical and N95. Surgical should be worn
+                with as little space open between the face and the edge of the mask as possible, as to try to keep fluids from entering
+                the mask's inside. N95 masks are worn by medical professionals and are intensive protection from infection.
+                Cloth based reusable, washable masks are unfortunately ineffective. Masks are generally best worn by ill patients. (Source: UCI SHC)
+            </p>
+            <p class="headertext">
+                Good Practices:
+            <p class="bodyp">
+                &nbsp&nbsp&nbsp&nbspIn order to combat the spread of infectious diseases such as coronaviruses, aim to limit exposure to large
+                groups of people while you are feeling ill. Stay indoors and rest until you recover and may then return to regularly attending
+                large gatherings / classes. (Source: UCI SHC)
+            </p>
+        </div>
+    </div>
+</body>
+</html>
