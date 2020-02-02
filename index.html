@@ -12,7 +12,7 @@
     <div id="top">
         <img class="mask" />
 
-        <button id="">Report Cough</button>
+        <button id="" onclick="updatePoints()">Report Cough</button>
 
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">></a>
@@ -36,6 +36,7 @@
     <script>
         const maxI = 200, rad = 21, opac = .6;
         var map, heatmap;
+        var stuff = [];
 
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
@@ -62,6 +63,7 @@
               // not valid anymore => return to last valid position
               map.panTo(lastValidCenter);
                 });
+
             heatmap = new google.maps.visualization.HeatmapLayer({
                 data: getPoints(),
                 map: map
@@ -102,23 +104,30 @@
             }
 
       // Heatmap data: 500 Points
-      function getPoints() {
+      function getPoints(position = false) {
+        //TODO
 
-        var i;
-        var stuff = [new google.maps.LatLng(33.648743, -117.842286)];
-        for (i = 0; i < 3000; i++) {
-
-        stuff.push(new google.maps.LatLng(33.648743 + i*0.00000000000001, -117.842286 - i*0.00000000000001));
-        stuff.push(new google.maps.LatLng(33.645542 + i*0.000000001, -117.839067 - i*0.000000001));
-        stuff.push(new google.maps.LatLng(33.645542 - i*0.000000001, -117.839067 + i*0.000000001));
-        stuff.push(new google.maps.LatLng(33.645535 - i*0.000000001, -117.838500 + i*0.00000001));
-        stuff.push(new google.maps.LatLng(33.651235 + i*0.000000001, -117.845331 + i*0.00000001));
+        if (position){
+            stuff.push(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
         }
+        console.log(stuff)
 
         return stuff;
         }
 
+    function updatePoints(){
+        
+        navigator.geolocation.getCurrentPosition(getPoints)
 
+        heatmap = heatmap = new google.maps.visualization.HeatmapLayer({
+                data: stuff,
+                map: map
+                });
+            
+        heatmap.set('radius', heatmap.get('radius') ? null : 11)
+        google.maps.event.trigger(map, 'resize');
+
+    }
     function getLocation() {
         if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(setMarker);
@@ -138,7 +147,9 @@
     function setMarker(position) {
         var marker = new google.maps.Marker({position: {lat: position.coords.latitude, lng: position.coords.longitude}, map: map});
         }
+
     getLocation();
+    
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXcflCIGWEE9q9BD-I2EHO4y3nLP5MedE&libraries=visualization,places&callback=initMap">
     </script>
