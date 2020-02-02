@@ -121,13 +121,13 @@ html, body {
 
 
 .FLUCI{
-    content: url("https://cdn.discordapp.com/attachments/673063010201370644/673376042609803324/FLUCI.png");
+    content: url("https://cdn.discordapp.com/attachments/673063010201370644/673387896782192660/FLUCI.png");
     max-height: 80%;
     max-width: 20%;
     position: relative;
     float: left;
     left: 13px;
-    top: 21px;
+    top: 30px;
 }
 
 @media screen and (max-height: 450px) {
