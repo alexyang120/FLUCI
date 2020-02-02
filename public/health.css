@@ -52,6 +52,18 @@ body {
 
 .bodyp {
     font-size: 25px;
+    float: right;
+    width: 60%;
+    bottom: 20px;
+    position: relative;
+}
+
+.bodyp2 {
+    font-size: 25px;
+}
+
+.maskimg {
+    width: 400px;
 }
 
 .slider {
