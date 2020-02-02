@@ -11,9 +11,10 @@
 
 button {
     font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     padding: 20px;
     text-align: center;
+    color: white;
     position: relative;
     font-size: 25px;
     margin: 4px 2px;
@@ -26,7 +27,7 @@ button {
     padding: 10px 30px;
     cursor: pointer;
     outline: none;
-    background-color: #e8e8e8;
+    background-color: #ff0526;
     float: left;
 }
 
