@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>FLUCI About</title>
+    <link rel="stylesheet" href="public/about.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="top">
+        <p class="toptext">ABOUT</p>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">></a>
+            <a class="sidelink" href="index.html">Home</a>
+            <a class="sidelink" href="about.html">About</a>
+
+        </div>
+        <div class="closednav">
+            <span style="cursor:pointer" onclick="openNav()"><</span>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </div>
+
+    <div id="bodycontent">
+        <div class="vitruvian"><img class="vitruvianimage" src="https://cdn.discordapp.com/attachments/673063010201370644/673109075671908362/Vitruvian.jpg" /></div>
+        <div class="slider">
+            <div class="slide1"></div>
+            <div class="slide2"></div>
+            <div class="slide3"></div>
+            <div class="slide4"></div>
+        </div>
+
+        <div class="bodytext">
+            <p class="bodyp">
+                Group Members:<br />
+                Bryan Ly<br />
+                Po'okela Moana<br />
+                Alex Yang<br />
+                Alvin Zou<br />
+                <br />
+                FLUCI was created by a group of four second year Computer Science students at the University 
+                of California, Irvine for the HackUCI 2020 hackathon event. FLUCI was made in the midst of the 
+                outbreak of 2019 nCoV, 2019 Novel Wuhan Coronavirus, and rising fear of the disease 
+                spreading into Orange County, CA. The web-based application, which mainly collects data collaboratively 
+                from any site user, uses Google Maps Javascript API to create a heatmap of reported illness across the UC 
+                Irvine campus and its surrounding area. The app was created to raise awareness about healthy practices during a potential 
+                contagious disease outbreak.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
