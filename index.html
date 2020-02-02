@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>FLUCI</title>
-    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="static/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
 </head>
 
@@ -49,6 +49,17 @@
               fullscreenControl: false,
               streetViewControl: false
             });
+            
+
+            var i;
+            for (i = 0; i < 80; i++) {
+
+            stuff.push(new google.maps.LatLng(33.648743 + i*0.00000000000001, -117.842286 - i*0.00000000000001));
+            stuff.push(new google.maps.LatLng(33.645542 + i*0.000000001, -117.839067 - i*0.000000001));
+            stuff.push(new google.maps.LatLng(33.645542 - i*0.000000001, -117.839067 + i*0.000000001));
+            stuff.push(new google.maps.LatLng(33.645535 - i*0.000000001, -117.838500 + i*0.00000001));
+            stuff.push(new google.maps.LatLng(33.651235 + i*0.000000001, -117.845331 + i*0.00000001));
+            }
 
             var southWest = new google.maps.LatLng(33.634905, -117.874089);
             var northEast = new google.maps.LatLng(33.658475, -117.819066);
@@ -66,16 +77,17 @@
                 });
 
             heatmap = new google.maps.visualization.HeatmapLayer({
-                data: getPoints(),
+                data: stuff,
                 map: map
                 });
 
-            heatmap.set('radius', heatmap.get('radius') ? null : 23)
+            heatmap.set('radius', heatmap.get('radius') ? null : 11)
             var search = new google.maps.places.SearchBox(document.getElementById("mapsearch"));
         }
         function toggleHeatmap() {
             heatmap.setMap(heatmap.getMap() ? null : map);
             }
+
         function changeGradient() {
             var gradient = [
             'rgba(0, 255, 255, 0)',
@@ -109,23 +121,17 @@
         //TODO
 
         if (position){
-            stuff.push(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+            heatmap.data.push(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
         }
-        console.log(stuff)
 
-        return stuff;
+        //return stuff;
         }
 
     function updatePoints(){
         
         navigator.geolocation.getCurrentPosition(getPoints)
-
-        heatmap = heatmap = new google.maps.visualization.HeatmapLayer({
-                data: stuff,
-                map: map
-                });
             
-        heatmap.set('radius', heatmap.get('radius') ? null : 11)
+        //  heatmap.set('radius', heatmap.get('radius') ? null : 11)
         google.maps.event.trigger(map, 'resize');
 
     }
