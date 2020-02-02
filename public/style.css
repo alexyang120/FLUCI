@@ -15,18 +15,19 @@ button {
     padding: 20px;
     text-align: center;
     position: relative;
-    font-size: 27px;
+    font-size: 25px;
     margin: 4px 2px;
     border-radius: 15px;
-    height: 60%;
-    width: 20%;
-    left: 10%;
-    top: 15%;
+    height: 45%;
+    width: 40%;
+    left: 3%;
+    top: 31%;
     border: 1px solid black;
     padding: 10px 30px;
     cursor: pointer;
     outline: none;
     background-color: #e8e8e8;
+    float: left;
 }
 
     button:active {
@@ -117,6 +118,17 @@ html, body {
     .mask:hover {
         content: url("https://cdn.discordapp.com/attachments/673063010201370644/673317360731684864/New_Piskel-6.png");
     }
+
+
+.FLUCI{
+    content: url("https://cdn.discordapp.com/attachments/673063010201370644/673376042609803324/FLUCI.png");
+    max-height: 80%;
+    max-width: 20%;
+    position: relative;
+    float: left;
+    left: 13px;
+    top: 21px;
+}
 
 @media screen and (max-height: 450px) {
     .sidenav {
