@@ -1,0 +1,129 @@
+#top {
+    height: 20%;
+    background-color: #d0d0d0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+#map {
+  height: 80%;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    font-size: 27px;
+    margin: 4px 2px;
+    border-radius: 15px;
+    height: 60%;
+    width: 20%;
+    left: 10%;
+    top: 15%;
+    border: 1px solid black;
+    padding: 10px 30px;
+    cursor: pointer;
+    outline: none;
+    background-color: #e8e8e8;
+}
+
+    button:active {
+        -webkit-box-shadow: inset 0px 0px 5px gray;
+        outline: none;
+        background-color: #d0d0d0;
+    }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#floating-panel {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 35%;
+  z-index: 5;
+  text-align: center;
+}
+.group {
+  border: 1px solid #999;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 5px;
+  line-height: 25px;
+  background-color: white;
+  font-family: 'Roboto','sans-serif';
+  font-size: small;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #d0d0d0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    -webkit-box-shadow: -0px 0px 10px 6px gray;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    top: 0;
+    right: 80%;
+    font-size: 36px;
+    position: absolute;
+}
+
+.closednav {
+    float: right;
+    font-size: 36px;
+    position: relative;
+    right: 10px;
+    top: 5px;
+}
+
+.closebtn:hover {
+    color: white;
+}
+
+.mask {
+    content: url("https://cdn.discordapp.com/attachments/673063010201370644/673317360731684864/New_Piskel-6.png");
+    max-height: 100%;
+    max-width: 20%;
+    position: relative;
+    float: left;
+    left: 10px;
+}
+
+    .mask:hover {
+        content: url("https://cdn.discordapp.com/attachments/673063010201370644/673317360731684864/New_Piskel-6.png");
+    }
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+     .sidenav a {
+        font-size: 18px;
+    }
+}
